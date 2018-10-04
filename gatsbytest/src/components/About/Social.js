@@ -4,10 +4,10 @@ import PropTypes from "prop-types";
 
 import config from "../../../content/meta/config";
 
-import FaGithub from "react-icons/lib/fa/github-square";
-import FaFacebook from "react-icons/lib/fa/facebook-square";
-import FaTwitter from "react-icons/lib/fa/twitter-square";
-import FaLink from "react-icons/lib/fa/external-link-square";
+import { FaGithub } from "react-icons/fa/";
+import { FaFacebook } from "react-icons/fa/";
+import { FaTwitter } from "react-icons/fa/";
+import { FaLink } from "react-icons/fa/";
 
 import {
   Section,

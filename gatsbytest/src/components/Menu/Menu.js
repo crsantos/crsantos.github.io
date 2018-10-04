@@ -2,10 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 require("core-js/fn/array/from");
 
-import FaHome from "react-icons/lib/fa/home";
-import FaSearch from "react-icons/lib/fa/search";
-import FaTag from "react-icons/lib/fa/tag";
-import FaMale from "react-icons/lib/fa/male";
+import { FaHome } from "react-icons/fa/";
+import { FaSearch } from "react-icons/fa/";
+import { FaTag } from "react-icons/fa/";
+import { FaMale } from "react-icons/fa/";
 
 import Item from "./Item";
 import Expand from "./Expand";

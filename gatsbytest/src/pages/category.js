@@ -1,11 +1,13 @@
-import FaTag from "react-icons/lib/fa/tag";
+import { FaTag } from "react-icons/fa/";
 import PropTypes from "prop-types";
 import React from "react";
+import { graphql } from 'gatsby'
+import Layout from "../layouts"
 
 import { ThemeContext } from "../layouts";
 import Article from "../components/Article/";
 import Headline from "../components/Article/Headline";
-import Link from "gatsby-link";
+import { Link } from "gatsby";
 import List from "../components/List";
 import Seo from "../components/Seo";
 
@@ -43,7 +45,7 @@ const CategoryPage = props => {
   }
 
   return (
-    <React.Fragment>
+    <Layout>
       <ThemeContext.Consumer>
         {theme => (
           <Article theme={theme}>
@@ -75,7 +77,7 @@ const CategoryPage = props => {
       </ThemeContext.Consumer>
 
       <Seo facebook={facebook} />
-    </React.Fragment>
+    </Layout>
   );
 };
 
@@ -106,8 +108,8 @@ export const guery = graphql`
             cover {
               children {
                 ... on ImageSharp {
-                  sizes(maxWidth: 800, maxHeight: 360) {
-                    ...GatsbyImageSharpSizes_withWebp
+                  fluid(maxWidth: 800, maxHeight: 360) {
+                    ...GatsbyImageSharpFluid_tracedSVG
                   }
                 }
               }

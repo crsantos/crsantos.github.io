@@ -1,4 +1,5 @@
 import React from "react";
+import Layout from "../layouts"
 import DevStack from "../components/About/DevStack";
 import Technologies from "../components/About/Technologies";
 import Who from "../components/About/Who";
@@ -15,7 +16,7 @@ import Headline from "../components/Article/Headline";
 const AboutMePage = props => {
 
   return (
-    <React.Fragment>
+    <Layout>
       <ThemeContext.Consumer>
         {theme => (
           <Article theme={theme}>
@@ -31,7 +32,7 @@ const AboutMePage = props => {
           </Article>
         )}
       </ThemeContext.Consumer>
-    </React.Fragment>
+    </Layout>
   );
 };
 

@@ -1,5 +1,7 @@
 import PropTypes from "prop-types";
 import React from "react";
+import { graphql } from 'gatsby'
+import Layout from "../layouts"
 
 require("core-js/fn/array/find");
 
@@ -20,7 +22,7 @@ const SearchPage = props => {
   } = props;
 
   return (
-    <React.Fragment>
+    <Layout>
       <ThemeContext.Consumer>
         {theme => (
           <Article theme={theme}>
@@ -46,7 +48,7 @@ const SearchPage = props => {
           height: 30px;
         }
       `}</style>
-    </React.Fragment>
+    </Layout>
   );
 };
 

@@ -1,7 +1,7 @@
-import FaTag from "react-icons/lib/fa/tag";
+import { FaTag } from "react-icons/fa/";
 import PropTypes from "prop-types";
 import React from "react";
-
+import { graphql } from "gatsby";
 import Seo from "../components/Seo";
 import { ThemeContext } from "../layouts";
 import Article from "../components/Article";
@@ -10,7 +10,7 @@ import List from "../components/List";
 
 const CategoryTemplate = props => {
   const {
-    pathContext: { category },
+    pageContext: { category },
     data: {
       allMarkdownRemark: { totalCount, edges },
       site: {
@@ -24,12 +24,9 @@ const CategoryTemplate = props => {
       <ThemeContext.Consumer>
         {theme => (
           <Article theme={theme}>
-            
             <header>
-              <Headline title="Posts in category" theme={theme} />
-            
               <Headline theme={theme}>
-                <FaTag />
+                <span>Posts in category</span> <FaTag />
                 {category}
               </Headline>
               <p className="meta">
@@ -52,7 +49,7 @@ const CategoryTemplate = props => {
 
 CategoryTemplate.propTypes = {
   data: PropTypes.object.isRequired,
-  pathContext: PropTypes.object.isRequired
+  pageContext: PropTypes.object.isRequired
 };
 
 export default CategoryTemplate;
