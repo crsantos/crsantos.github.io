@@ -16,7 +16,7 @@ const Technologies = props => {
 
   return (
     <Section id="technologies">
-      <SectionTitle theme={theme}>Technologies / Tools I have used</SectionTitle>
+      <SectionTitle theme={theme}>Technologies / Tools used 🛠</SectionTitle>
       <UnorderedList>
         <ListItem theme={theme}>
           <p>{technologies.join(", ")}.</p>

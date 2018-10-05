@@ -4,6 +4,7 @@ import Technologies from "../components/About/Technologies";
 import Who from "../components/About/Who";
 import Social from "../components/About/Social";
 import Article from "../components/Article";
+import Projects from "../components/About/Projects"
 import { Timeline } from "../components/styled";
 
 import { ThemeContext } from "../layouts";
@@ -25,6 +26,7 @@ const AboutMePage = props => {
               <DevStack theme={theme} />
               <Technologies theme={theme} />
               <Social theme={theme} />
+              <Projects theme={theme}/>
             </Timeline>
           </Article>
         )}

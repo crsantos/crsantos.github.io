@@ -24,7 +24,7 @@ Some of them from scratch, some of them supporting and evolving.
 
 ## Blip
 
-When working at Blip, I made part of a huge team that built and supported the [Sportsbook] app. 
+When working at Blip, I made part of a huge team that built and supported the [Sportsbook] app.
 
 // TODO
 

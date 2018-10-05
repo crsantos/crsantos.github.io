@@ -40,7 +40,7 @@ const Social = props => {
 
   return (
     <Section id="Social">
-      <SectionTitle theme={theme}>Where can you find me?</SectionTitle>
+      <SectionTitle theme={theme}>Where can you find me? 🗺</SectionTitle>
       <UnorderedList>
         {config.authorSocialLinks.map(link => (
           <ListItem key={link.url} theme={theme}>
