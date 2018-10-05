@@ -30,7 +30,7 @@ When working at Blip, I made part of a huge team that built and supported the [S
 
 ## Cashyt
 
-Cashyt is a spin-off of WIT Software that has a game called Birdy Bytes. 
+Cashyt is a spin-off of WIT Software that has a game called Birdy Bytes.
 It's a multi-game platfom that give cool rewards to its users, leveraging the sponsorship of some brands to pay for those prizes.
 
 It features phisical cards with codes that can give powers to players, currently distributed on retail, as a prize for consuming sponsor products.

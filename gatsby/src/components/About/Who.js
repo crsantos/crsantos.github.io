@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { graphql, StaticQuery } from 'gatsby'
 
 import {
   Section,
@@ -12,35 +13,44 @@ const Who = (props) => {
     theme
   } = props;
 
-  // const {
-  //   who: { edges: who }
-  // } = data;
-
   return (
-    <Section id="who">
-      <SectionTitle theme={theme}>Who?</SectionTitle>
-      <p>TODO: Who am I?</p>
-    </Section>
+    <StaticQuery query={graphql`
+      query WhoQuery {
+        who: markdownRemark(
+          fileAbsolutePath: { regex: "//parts/who/" }
+        ) {
+          html
+        }
+      }
+    `}
+      render = { data => {
+
+          const {
+            who: { html: whoHTML },
+          } = data;
+
+          return (
+          <Section id="who">
+            <SectionTitle theme={theme}>Who?</SectionTitle>
+            <div className="bodytext" dangerouslySetInnerHTML={{ __html: whoHTML }} />
+          </Section>)
+        }
+      }
+    />
   );
 };
 
 Who.propTypes = {
-  theme: PropTypes.object.isRequired // data: PropTypes.object.isRequired
+  theme: PropTypes.object.isRequired,
+  data: PropTypes.shape({
+    edges: PropTypes.shape({
+      node: PropTypes.shape({
+        html: PropTypes.string.isRequired,
+      }).isRequired,
+    }).isRequired,
+  }).isRequired
 };
 
-export default Who;
 
-//eslint-disable-next-line no-undef
-export const whoQuery = graphql`
-  query WhoQuery {
-    who: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "//parts/who/" } }
-    ) {
-      edges {
-        node {
-          html
-        }
-      }
-    }
-  }
-`;
+
+export default Who;
