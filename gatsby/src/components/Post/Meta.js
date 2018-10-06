@@ -3,11 +3,11 @@ import PropTypes from "prop-types";
 import { Link } from "gatsby";
 
 import { FaCalendar } from "react-icons/fa/";
-import { FaUser } from "react-icons/fa/";
 import { FaTag } from "react-icons/fa/";
+import { FaClock } from "react-icons/fa/";
 
 const Meta = props => {
-  const { prefix, author: authorName, category, theme } = props;
+  const { prefix, timeToRead, category, theme } = props;
 
   return (
     <p className="meta">
@@ -15,7 +15,7 @@ const Meta = props => {
         <FaCalendar size={18} /> {prefix}
       </span>
       <span>
-        <FaUser size={18} /> {authorName}
+        <FaClock size={18} /> {timeToRead}min
       </span>
       {category && (
         <span>

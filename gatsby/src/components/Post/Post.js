@@ -21,8 +21,10 @@ const Share = asyncComponent(() =>
 const Post = props => {
   const {
     post,
+    
     post: {
       html,
+      timeToRead,
       fields: { prefix, slug },
       frontmatter: { title, author, category }
     },
@@ -37,7 +39,7 @@ const Post = props => {
     <React.Fragment>
       <header>
         <Headline title={title} theme={theme} />
-        <Meta prefix={prefix} author={author} category={category} theme={theme} />
+        <Meta prefix={prefix} timeToRead={timeToRead} author={author} category={category} theme={theme} />
       </header>
       <Bodytext html={html} theme={theme} />
       <footer>

@@ -81,6 +81,7 @@ export const query = graphql`
       edges {
         node {
           excerpt
+          timeToRead
           fields {
             slug
             prefix

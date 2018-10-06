@@ -27,7 +27,7 @@ const Projects= props => {
             <Link theme={theme} target="_blank" href={project.link} rel="noopener">
               <Title theme={theme}>{project.title}</Title>
             </Link>
-            <Points>
+            <Points theme={theme}>
               <Point theme={theme}>
                 Type: {project.type}{" "}
                 {project.type === "Open Source"

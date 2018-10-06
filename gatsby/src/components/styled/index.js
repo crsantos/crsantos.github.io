@@ -14,9 +14,9 @@ export const Section = styled.section`
 `;
 
 export const SectionTitle = styled.h3`
-  font-size: 28px;
-  font-weight: 100;
-  margin: 0 0 10px 0;
+  font-size: ${ props => props.theme.font.size.l };
+  font-weight: ${ props => props.theme.font.weight.bold };
+  margin: ${ props => props.theme.space.stack.s };
   color: ${ props => props.theme.text.color.primary};
   font-weight: 300;
   padding-bottom: 5px;
@@ -39,12 +39,12 @@ export const SectionTitle = styled.h3`
 `;
 
 export const ListItem = styled.li`
-  font-size: 16px;
+  font-size: ${ props => props.theme.font.size.s };
   color: ${ props => props.theme.text.color.primary};
   list-style-type: none;
   margin: 10px 0;
-  font-weight: 100;
-  line-height: 30px;
+  font-weight: ${ props => props.theme.font.weight.light };
+  line-height: ${ props => props.theme.font.lineHeight.xxl };
 `;
 
 export const UnorderedList = styled.ul`
@@ -92,12 +92,12 @@ export const Link = styled(UnderlinedLink)`
 `;
 
 export const Points = styled.div`
-  margin-bottom: 40px;
+  margin-bottom: ${ props => props.theme.space.l };
   line-height: 50px;
 `;
 
 export const Title = styled.div`
-  font-size: 30px;
+  font-size: ${ props => props.theme.font.size.s };//30px;
   font-weight: 300;
   position: relative;
   &:before {
