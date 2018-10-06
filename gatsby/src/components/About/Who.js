@@ -30,10 +30,11 @@ const Who = (props) => {
           } = data;
 
           return (
-          <Section id="who">
-            <SectionTitle theme={theme}>Who?</SectionTitle>
-            <div className="bodytext" dangerouslySetInnerHTML={{ __html: whoHTML }} />
-          </Section>)
+            <Section id="who">
+              <SectionTitle theme={theme}>Who?</SectionTitle>
+              <div className="bodytext" dangerouslySetInnerHTML={{ __html: whoHTML }} />
+            </Section>
+          )
         }
       }
     />

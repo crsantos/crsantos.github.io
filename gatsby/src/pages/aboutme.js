@@ -14,14 +14,13 @@ import Headline from "../components/Article/Headline";
 const AboutMePage = props => {
 
   return (
-    <React.Fragment>
-      <ThemeContext.Consumer>
+    <ThemeContext.Consumer>
         {theme => (
           <Article theme={theme}>
             <header>
               <Headline title="About me" theme={theme} />
             </header>            
-            <Timeline>
+            <Timeline theme={theme}>
               <Who theme={theme} />
               <DevStack theme={theme} />
               <Technologies theme={theme} />
@@ -31,7 +30,6 @@ const AboutMePage = props => {
           </Article>
         )}
       </ThemeContext.Consumer>
-    </React.Fragment>
   );
 };
 
