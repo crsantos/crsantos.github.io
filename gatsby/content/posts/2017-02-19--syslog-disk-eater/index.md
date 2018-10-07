@@ -15,7 +15,7 @@ but @ffi.def_extern() was not called in the current subinterpreter.
 Returning 0
 ```
 
-## Quick fix
+# Quick fix
 
 You can upgrade your python 🐍 libs python-cryptography and python-openssl to the latest version available. 💪
 

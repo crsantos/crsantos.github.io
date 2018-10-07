@@ -15,7 +15,7 @@ const Meta = props => {
         <FaCalendar size={18} /> {prefix}
       </span>
       <span>
-        <FaClock size={18} /> {timeToRead}min
+        <FaClock size={18} /> {timeToRead} min
       </span>
       {category && (
         <span>
