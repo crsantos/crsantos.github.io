@@ -4,7 +4,6 @@ require("core-js/fn/array/from");
 
 import { FaHome } from "react-icons/fa/";
 import { FaSearch } from "react-icons/fa/";
-import { FaEnvelope } from "react-icons/fa/";
 import { FaTag } from "react-icons/fa/";
 import { FaMale } from "react-icons/fa/";
 
@@ -28,8 +27,7 @@ class Menu extends React.Component {
       { to: "/category/", label: "Categories", icon: FaTag },
       { to: "/aboutme/", label: "About Me", icon: FaMale },
       { to: "/search/", label: "Search", icon: FaSearch },
-      ...pages,
-      { to: "/contact/", label: "Contact", icon: FaEnvelope }
+      ...pages
     ];
     
     this.renderedItems = []; // will contain references to rendered DOM elements of menu
