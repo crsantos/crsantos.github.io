@@ -136,7 +136,7 @@ const Item = props => {
         }
 
         p {
-          line-height: 1.5;
+          line-height: ${theme.font.lineHeight.xl};
           padding: 0 ${theme.space.s};
           text-remove-gap: both;
         }

@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { graphql, StaticQuery } from 'gatsby'
+import Bodytext from "../Article/Bodytext";
 
 import {
   Section,
@@ -32,7 +33,7 @@ const Who = (props) => {
           return (
             <Section id="who">
               <SectionTitle theme={theme}>Who?</SectionTitle>
-              <div className="bodytext" dangerouslySetInnerHTML={{ __html: whoHTML }} />
+              <Bodytext html={whoHTML} theme={theme} />
             </Section>
           )
         }
