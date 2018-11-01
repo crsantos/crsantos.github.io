@@ -18,7 +18,6 @@ export const SectionTitle = styled.h3`
   font-weight: ${ props => props.theme.font.weight.bold };
   margin: ${ props => props.theme.space.stack.s };
   color: ${ props => props.theme.text.color.primary};
-  font-weight: 300;
   padding-bottom: 5px;
   position: relative;
   &:before {
@@ -43,7 +42,7 @@ export const ListItem = styled.li`
   color: ${ props => props.theme.text.color.primary};
   list-style-type: none;
   margin: 10px 0;
-  font-weight: ${ props => props.theme.font.weight.light };
+  font-weight: ${ props => props.theme.font.weight.regular };
   line-height: ${ props => props.theme.font.lineHeight.xxl };
 `;
 
@@ -58,9 +57,10 @@ export const UnderlinedLink = styled.a`
     props.href &&
     `
       border-bottom: 1px dashed rgba(0, 0, 0, 0.7);
-    `} padding-bottom: 1px;
+    `}
+  padding-bottom: 1px;
   &:hover {
-    color: ${ props => props.theme.text.color.inverse};
+    color: ${ props => props.theme.text.color.brand};
   }
 `;
 
@@ -71,7 +71,7 @@ export const ShowMoreButton = styled.button`
   cursor: pointer;
   border-radius: ${ props => props.theme.radius.smaller};
   color: white;
-  font-weight: 100;
+  font-weight: ${ props => props.theme.font.weight.light };
   padding: 10px 15px;
   font-size: 15px;
   border: 1px solid rgba(0, 0, 0, 0.69);
@@ -86,7 +86,7 @@ export const Wrapper = styled(ListItem)`
 `;
 
 export const Link = styled(UnderlinedLink)`
-  margin-bottom: ${ props => props.theme.space.s };
+  margin-bottom: ${ props => props.theme.space.xs };
   padding-bottom: ${ props => props.theme.space.inset.xs };
   display: inline-block;
 `;
@@ -98,7 +98,7 @@ export const Points = styled.div`
 
 export const Title = styled.div`
   font-size: ${ props => props.theme.font.size.s };//30px;
-  font-weight: 300;
+  font-weight: ${ props => props.theme.font.weight.standard };
   position: relative;
   &:before {
     content: "";

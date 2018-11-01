@@ -1,9 +1,9 @@
 export const devstack = [
-    { name: "Swift" },
+    { name: "Swift 🐦" },
     { name: "Objective-C" },
     { name: "Javascript" },
-    { name: "Python" },
-    { name: "Ruby" },
+    { name: "Python 🐍" },
+    { name: "Ruby 💎" },
   ];
   
   export const technologies = [

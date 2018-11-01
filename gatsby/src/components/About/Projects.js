@@ -52,7 +52,7 @@ const Projects= props => {
                 {project.description}{" "}
                 {project.extra === null ? null : `${project.extra}`}
               </Point>
-              <Point theme={theme}>{project.techStack}</Point>
+              <Point theme={theme}>🔧 {project.techStack}</Point>
             </Points>
           </div>
         ))}
